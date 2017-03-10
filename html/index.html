@@ -1,0 +1,73 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Picture Tag</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="../images/picture_tag.png" />
+  <link rel="stylesheet" type="text/css" href="../stylesheets/screen.css">
+</head>
+<body>
+  <header>
+    <h1>Image Gallery</h1>
+  </header>
+  <!-- We can add images for diffent screen width inside the picture tag itself-->
+  <section class="gallery-section">
+    <a href="subpage.html" class="img-link">
+      <picture>
+        <source media="(max-width: 480px)" srcset="../images/gallery-img-3.jpg">
+        <source media="(max-width: 767px)" srcset="../images/gallery-img-7.jpg">
+        <img src="../images/gallery-img-2.jpg" alt="a cute kitten">
+      </picture>
+    </a>
+    <picture>
+      <source media="(max-width: 480px)" srcset="../images/gallery-img-2.jpg">
+      <source media="(max-width: 767px)" srcset="../images/gallery-img-3.jpg">
+      <img src="../images/gallery-img-7.jpg" alt="a cute kitten">
+    </picture>
+    <picture>
+      <source media="(max-width: 480px)" srcset="../images/gallery-img-7.jpg">
+      <source media="(max-width: 767px)" srcset="../images/gallery-img-2.jpg">
+      <img src="../images/gallery-img-3.jpg" alt="a cute kitten">
+    </picture>
+    <picture>
+      <source media="(max-width: 480px)" srcset="../images/gallery-img-3.jpg">
+      <source media="(max-width: 767px)" srcset="../images/gallery-img-7.jpg">
+      <img src="../images/gallery-img-2.jpg" alt="a cute kitten">
+    </picture>
+    <picture>
+      <source media="(max-width: 480px)" srcset="../images/gallery-img-2.jpg">
+      <source media="(max-width: 767px)" srcset="../images/gallery-img-3.jpg">
+      <img src="../images/gallery-img-7.jpg" alt="a cute kitten">
+    </picture>
+  </section>
+  <a href="#">Click here!!!</a>
+  <a href="some.html">gd</a>
+  <section class="picture-section">
+    <!-- can specify differnt images for diffrent pixel ratios, hence we can improve the picture quality in different DPR -->
+    <p class="head">Different images for differnt DPR</p>
+    <picture>
+      <img src="../images/kitten-large.png" srcset="../images/kitten-large.png 1x, ../images/kitten-medium.png 2x, ../images/kitten-small.png 3x">
+    </picture>
+  </section>
+  <footer></footer>
+  <script>
+  // Register Service Worker.
+
+  if ('serviceWorker' in navigator) {
+    // Path is relative to the origin, not project root.
+    navigator.serviceWorker.register('/sw.js')
+      .then(function(reg) {
+        console.log('Registration succeeded. Scope is ' + reg.scope);
+      })
+      .catch(function(error) {
+        console.error('Registration failed with ' + error);
+      });
+  }
+  </script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script type="text/javascript" src="../js/functions.js"></script>
+  <script type="text/javascript" src="../js/picturefill.min.js"></script>
+</body>
+</html>
+

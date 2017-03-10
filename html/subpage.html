@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>picturezoom</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/png" href="../images/picture_tag.png" />
+  <link rel="stylesheet" type="text/css" href="../stylesheets/screen.css">
+</head>
+
+<body>
+  <header class="sub-header"></header>
+  <section class="sub-picture-section">
+    <p class="head">Image change in 480 and 768 width</p>
+    <!-- first image changed after 480w and second image will be change after 768 and the remaining will be the third image-->
+    <picture>
+      <img src="../images/gallery-img-1.jpg" sizes="100vw" srcset="../images/gallery-img-1.jpg 480w,
+      ../images/gallery-img-2.jpg 768w, ../images/gallery-img-4.jpg 1200w">
+    </picture>
+    <!-- image will be viewed in the full width of screen upto 767 and image width will be half of the screen above 767-->
+    <picture class="vw-specification">
+      <img src="../images/kitten-large.png" sizes="(max-width: 767px) 100vw, 50vw" srcset="../images/kitten-large.png">
+      <!-- <img src="images/space-needle.jpg" sizes="(max-width: 40em) 100vw, 50vw"
+srcset="images/space-needle.jpg 0.4x, images/space-needle-2x.jpg 0.8x,
+images/space-needle-hd.jpg 1.2x"> -->
+    </picture>
+  </section>
+  <footer></footer>
+  <script type="text/javascript" src="../js/picturefill.min.js"></script>
+</body>
+
+</html>
