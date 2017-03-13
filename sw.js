@@ -15,7 +15,6 @@ this.addEventListener('install', function(event) {
   );
 });
 
-
 // Define what happens when a resource is requested.
 // For our app we do a Cache-first approach.
 self.addEventListener('fetch', function(event) {
