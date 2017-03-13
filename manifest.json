@@ -1,6 +1,6 @@
 {
-  "name": "Progressive Web App: PhotoBooth",
-  "short_name": "PhotoBooth",
+  "name": "PWA Picture Tag: PictureGallery",
+  "short_name": "PictureGallery",
   "description": "Simple Progressive Web App for taking selfies.",
   "icons": [{
       "src": "./images/picture_tag.png",
