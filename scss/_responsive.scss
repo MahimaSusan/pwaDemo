@@ -1,0 +1,16 @@
+@include respond-to(medium) {
+  .gallery-section {
+    padding-left: 0;
+    padding-top: 10px;
+    background: rgba(128, 128, 128, 0.18);
+    background: linear-gradient(rgba(0, 188, 212, 0.2), rgba(76, 175, 80, 0.44));
+    a.img-link {
+    	width: 49%;
+    }
+    picture {
+    	img {
+    		width: 49%;
+    	}
+    }
+  }
+}
