@@ -5,8 +5,8 @@ this.addEventListener('install', function(event) {
       // The cache will fail if any of these resources can't be saved.
       return cache.addAll([
           // Path is relative to the origin, not the app directory.
-          './images/gallery-img-2.jpg',
-          './images/gallery-img-3.jpg'
+          // './images/gallery-img-2.jpg',
+          // './images/gallery-img-3.jpg'
         ])
         .then(function() {
           console.log('Success! App is available offline!');
